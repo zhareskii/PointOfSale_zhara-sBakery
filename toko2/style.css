@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Agar gambar mengisi seluruh tinggi layar */
+    width: 100vw; /* Agar gambar mengisi seluruh lebar layar */
+}
+
+body.form{
+    font-family: 'Poppins', sans-serif;
+    background: #ececec;
+}
+
+.box-area{
+    width: 930px;
+}
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+::placeholder{
+    font-size: 16px;
+}
+
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+
+
+@media only screen and (max-width: 768px){
+
+     .box-area{
+        margin: 0 10px;
+
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+
+}
+/* Gaya untuk grup radio (opsional jika ada) */
+.radio-group {
+    margin-bottom: 15px; /* Margin bawah untuk grup radio */
+}
+
+/* Gaya untuk pesan error */
+.error-message {
+    color: red; /* Warna teks merah */
+    text-align: center; /* Rata tengah */
+    margin-top: 10px; /* Margin atas */
+    font-size: 14px; /* Ukuran font pesan error */
+}
+
+/* Memastikan form responsif untuk layar kecil */
+@media (max-width: 480px) {
+    form {
+        width: 90%; /* Lebar form menyesuaikan layar */
+        padding: 15px; /* Mengurangi padding pada layar kecil */
+    }
+
+    h2 {
+        font-size: 20px; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    button {
+        font-size: 14px; /* Ukuran font tombol lebih kecil */
+    }
+}
+
+.radio-group {
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+}
+.radio-group label {
+    margin-left: 10px; /* Memberikan jarak antara radio button dan label */
+    margin-right: 20px; /* Memberikan jarak antara label */
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+th {
+    background-color: #f09688;
+    color: white;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+.btn-add {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+.close {
+    float: right;
+    cursor: pointer;
+    color: red;
+    font-size: 24px;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    background: #f09688;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+button:hover {
+    background: darkred;
+}
+
+/*sidebar*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    padding-top: 20px;
+    background-color: #FFEAE3;
+    transition: width 0.3s;
+}
+
+.sidebar .nav-link{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    color: black;
+}
+
+.sidebar .description{
+    font-size: 14px;
+}
+
+.sidebar .nav-link:hover{
+    background-color: #f09688;
+    color: white;
+}
+
+.main-content{
+    height: 100%;
+    margin-left: 200px;
+    padding: 20px;
+}
+
+@media (max-width: 480px){
+    .sidebar{
+        width: 60px;
+    }
+
+    .sidebar .description{
+        display: none;
+    }
+
+    .sidebar .nav-link{
+        justify-content: center;
+    }
+
+    .main-content{
+        margin-left: 60px;
+    }
+}
+
+.container {
+    width: 80%; /* Lebar container */
+    max-width: 1200px; /* Lebar maksimum */
+    margin: 20px auto; /* Pusatkan container */
+    padding: 20px; /* Padding di dalam container */
+    background-color: #fff; /* Warna latar belakang putih */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+/* Judul */
+h1 {
+    text-align: center; /* Pusatkan teks */
+    margin-bottom: 20px; /* Jarak bawah */
+}
+
+.daftar{
+    display: flex;
+}
+
+/* Tabel */
+table {
+    width: 100%; /* Lebar tabel 100% dari container */
+    border-collapse: collapse; /* Gabungkan border */
+}
+
+/* Header tabel */
+th {
+    background-color: #f09688; /* Warna latar belakang header */
+    color: white; /* Warna teks header */
+    padding: 10px; /* Padding di dalam header */
+}
+
+/* Sel tabel */
+td {
+    padding: 10px; /* Padding di dalam sel */
+    border: 1px solid #ddd; /* Border sel */
+}
+
+/* Hover effect untuk baris tabel */
+tr:hover {
+    background-color: #f1f1f1; /* Warna latar belakang saat hover */
+}
+
+/* Box untuk tabel */
+.table-box {
+    border: 2px solid #f09688; /* Border kotak */
+    border-radius: 8px; /* Sudut membulat */
+    padding: 10px; /* Padding di dalam kotak */
+    margin-top: 20px; /* Jarak atas */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Lebar container lebih kecil di perangkat kecil */
+    }
+
+    table {
+        font-size: 14px; /* Ukuran font lebih kecil di perangkat kecil */
+    }
+}
+
+/* Tombol bulat dengan ikon plus */
+/* Modal Overlay */
+.modal {
+    display: none; /* Sembunyikan modal secara default */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Efek transparan */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Konten Modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Tombol Tutup Modal */
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Tombol Plus */
+.btn-add {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-add:hover {
+    background-color: darkred;
+}
+
+.btn-add span {
+    font-size: 40px;
+    line-height: 0;
+}
+
+
